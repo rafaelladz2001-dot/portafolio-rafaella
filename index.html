@@ -3,8 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rafaella Eleonor Diaz Miranda | Portafolio</title>
-  <meta name="description" content="Portafolio de Rafaella Eleonor Diaz Miranda, estudiante de Ingeniería Civil Informática." />
+  <title>Rafaella Eleonor Díaz Miranda | Portafolio</title>
+  <meta name="description" content="Portafolio de Rafaella Eleonor Díaz Miranda, estudiante de Ingeniería Civil Informática." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23a85d76'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3ERE%3C/text%3E%3C/svg%3E">
+  <meta property="og:title" content="Rafaella Eleonor Díaz Miranda | Portafolio" />
+  <meta property="og:description" content="Portafolio de Rafaella Eleonor Díaz Miranda, estudiante de Ingeniería Civil Informática." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/foto.jpg" />
+  <meta name="twitter:card" content="summary" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +21,11 @@
     <div class="container nav-inner">
       <a class="brand" href="#inicio">RE</a>
 
-      <nav>
+      <button id="navToggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="navLinks">
         <a href="#inicio">Inicio</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#habilidades">Habilidades</a>
@@ -30,10 +40,14 @@
     <section id="inicio" class="hero">
       <div class="container hero-inner">
         <div class="hero-avatar">
-          <img src="assets/foto.png" alt="Foto de Rafaella">
+          <!-- Si más adelante quieres usar una foto, un retrato cerrado con fondo simple
+               se verá mejor aquí que una selfie casual. Reemplaza este comentario por:
+          <img src="assets/foto.jpg" alt="Foto de Rafaella Díaz">
+          -->
+          RE
         </div>
 
-        <h1 class="hero-title">Rafaella Eleonor Diaz Miranda</h1>
+        <h1 class="hero-title">Rafaella Eleonor Díaz Miranda</h1>
 
         <p class="hero-subtitle">
           Estudiante de Ingeniería Civil Informática, interesada en el desarrollo de software,
@@ -42,8 +56,9 @@
 
         <div class="hero-cta">
           <a class="btn" href="#proyectos">Ver mis proyectos</a>
-          <a class="btn-outline" href="https://github.com/efimera222" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn-outline" href="https://github.com/rafaelladz2001-dot" target="_blank" rel="noopener">GitHub</a>
           <a class="btn-outline" href="https://www.linkedin.com/in/rafaella-eleonor-diaz-miranda-410a7b388/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn-outline" href="mailto:rafaelladiazmiranda222@gmail.com">Correo</a>
         </div>
 
       </div>
@@ -53,9 +68,9 @@
       <div class="container">
         <h2>Sobre mí</h2>
         <p class="lead">
-          Soy estudiante de Ingeniería Civil Informática en la Universidad de Valparaíso.
-          Me gusta aprender nuevas herramientas, desarrollar proyectos desde cero y seguir creciendo
-          en áreas como desarrollo web, bases de datos, backend e inteligencia artificial.
+          Estudiante de Ingeniería Civil Informática en la Universidad de Valparaíso, enfocada en
+          desarrollo backend con Python, FastAPI y MySQL. Me interesa construir aplicaciones
+          web, trabajar con estructuras de datos y explorar soluciones de inteligencia artificial.
         </p>
 
         <ul class="chip-list">
@@ -73,7 +88,7 @@
         <h2>Habilidades</h2>
 
         <div class="grid cards-3">
-          <article class="card">
+          <article class="card fade-in-up">
             <div class="card-icon">💻</div>
             <h3>Lenguajes y desarrollo</h3>
             <p>
@@ -88,7 +103,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card fade-in-up">
             <div class="card-icon">⚙️</div>
             <h3>Backend y datos</h3>
             <p>
@@ -97,13 +112,13 @@
             </p>
             <div class="chips">
               <span>FastAPI</span>
-              <span>PostgreSQL</span>
+              <span>MySQL</span>
               <span>APIs</span>
               <span>SQL</span>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card fade-in-up">
             <div class="card-icon">🧠</div>
             <h3>Aprendizaje continuo</h3>
             <p>
@@ -124,9 +139,8 @@
     <section id="proyectos" class="section">
       <div class="container">
         <h2>Mis proyectos</h2>
-
-        <div class="grid cards-3">
-          <article class="card">
+        <div class="grid projects-grid">
+          <article class="card fade-in-up">
             <div class="card-icon">🌐</div>
             <h3>Portafolio Web</h3>
             <p>
@@ -140,31 +154,58 @@
             </div>
           </article>
 
-          <article class="card">
-            <div class="card-icon">🔌</div>
-            <h3>API de Tareas</h3>
+          <article class="card fade-in-up">
+            <div class="card-icon">🕸️</div>
+            <h3>Análisis de Redes Sociales</h3>
+            <p class="card-team">Ramo: Estructuras de Datos</p>
             <p>
-              Proyecto backend enfocado en la gestión de tareas mediante operaciones CRUD, con una
-              estructura ordenada y orientación a buenas prácticas de desarrollo.
+              Sistema en Python para analizar una red social, construido con estructuras de datos
+              propias (sin usar las nativas del lenguaje): tabla hash con hashing djb2 y encadenamiento
+              separado, grafo social con recorrido BFS para grado de conexión, y algoritmos de
+              ordenamiento implementados a mano.
             </p>
             <div class="chips">
               <span>Python</span>
-              <span>FastAPI</span>
-              <span>PostgreSQL</span>
+              <span>Estructuras de datos</span>
+              <span>Hash table</span>
+              <span>Grafos</span>
             </div>
           </article>
 
-          <article class="card">
-            <div class="card-icon">🤖</div>
-            <h3>Mini IA de Sentimientos</h3>
+          <article class="card fade-in-up">
+            <div class="card-icon">🍄</div>
+            <h3>Autómata de Pila: Mario vs Goomba</h3>
+            <p class="card-team">Ramo: Lenguajes y Autómatas</p>
             <p>
-              Proyecto de análisis de texto para clasificar sentimientos utilizando herramientas de
-              aprendizaje automático y procesamiento básico de lenguaje.
+              Diseño e implementación de un autómata de pila (PDA) con temática original de un
+              plataformero al estilo Mario, incluyendo definición formal, diagrama de estados,
+              tabla de transiciones y su código en Python.
             </p>
             <div class="chips">
               <span>Python</span>
-              <span>scikit-learn</span>
-              <span>Machine Learning</span>
+              <span>Teoría de la computación</span>
+              <span>Autómatas de pila</span>
+            </div>
+          </article>
+
+          <article class="card fade-in-up">
+            <div class="card-icon">🏭</div>
+            <h3>SICO-FIS</h3>
+            <p class="card-team">Proyecto de equipo (Scrum)</p>
+            <p>
+              Sistema de gestión para una empresa de supervisión, control y mantenimiento de
+              maquinaria industrial del rubro panadero: historial de mantenciones, cotizaciones,
+              alertas preventivas y telemetría de equipos. Rol: Developer, a cargo de historias de
+              usuario, mockups y modelo de dominio.
+            </p>
+            <div class="chips">
+              <span>Historias de usuario</span>
+              <span>Mockups</span>
+              <span>Modelo de dominio</span>
+              <span>Scrum</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/SICO-2026/SICO-FIS" target="_blank" rel="noopener">Ver repositorio →</a>
             </div>
           </article>
         </div>
@@ -176,40 +217,10 @@
         <h2>Contacto</h2>
         <p class="lead">
           Si quieres conocer más sobre mi trabajo, colaborar conmigo o contactarme por oportunidades,
-          aquí puedes encontrarme.
+          aquí puedes encontrarme (links arriba en la portada), o escribirme directo por este formulario.
         </p>
 
-        <div class="grid cards-3">
-          <article class="card">
-            <div class="card-icon">📧</div>
-            <h3>Email</h3>
-            <p>
-              <a href="mailto:rafaelladiazmiranda222@gmail.com">rafaelladiazmiranda222@gmail.com</a>
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-icon">💼</div>
-            <h3>LinkedIn</h3>
-            <p>
-              <a href="https://www.linkedin.com/in/rafaella-eleonor-diaz-miranda-410a7b388/" target="_blank" rel="noopener">
-                Ver perfil profesional
-              </a>
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-icon">🐙</div>
-            <h3>GitHub</h3>
-            <p>
-              <a href="https://github.com/efimera222" target="_blank" rel="noopener">
-                Ver repositorios
-              </a>
-            </p>
-          </article>
-        </div>
-
-        <form class="form" action="https://formspree.io/f/xbdpkjla" method="POST">
+        <form id="contactForm" class="form" action="https://formspree.io/f/xbdpkjla" method="POST">
           <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
 
           <label>
@@ -228,7 +239,7 @@
           </label>
 
           <button class="btn" type="submit">Envíame un mensaje</button>
-          <p class="muted">Responderé a través del correo que ingreses.</p>
+          <p id="formStatus" class="muted" role="status"></p>
         </form>
       </div>
     </section>
@@ -236,10 +247,10 @@
 
   <footer class="footer">
     <div class="container">
-      <p>© <span id="year"></span> Rafaella Eleonor Diaz Miranda</p>
+      <p>© <span id="year"></span> Rafaella Eleonor Díaz Miranda </p>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
